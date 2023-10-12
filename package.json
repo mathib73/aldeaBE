@@ -7,7 +7,9 @@
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix .",
-    "dev": "nodemon --exec 'npm run lint && npm run start'"
+    "dev": "nodemon --exec 'npm run lint && npm run start'",
+    "build": "babel index.js -d dist",
+    "prod": "npm run build && nodemon dist/index.js"
   },
   "keywords": [],
   "author": "",
