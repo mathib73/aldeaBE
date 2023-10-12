@@ -4,12 +4,12 @@ const express = require('express');
 const sequelize = require('sequelize');
 const dotenv = require('dotenv').config();
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const db = require('./models');
 const userRoutes = require('./routes/userRoutes');
 const prototiposRoutes = require('./routes/prototiposRoutes');
 const imagesRoutes = require('./routes/imagesRoutes');
 const excelRoutes = require('./routes/excelRoutes');
-const cors = require('cors');
 
 // setting up your port
 const PORT = process.env.PORT || 8080;

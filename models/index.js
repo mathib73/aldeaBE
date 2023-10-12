@@ -4,7 +4,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 // port for my database is 5433
 // database name is discover
 const sequelize = new Sequelize(
-  `postgres://${process.env.postgresUser}:${process.env.postgresPassword}@${process.env.postgresHost}:${process.env.postgresPort}/${process.env.postgresDB}`,
+  process.env.postgresqlURL,
   { dialect: 'postgres' },
 );
 
